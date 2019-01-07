@@ -1,5 +1,9 @@
+package ee.taltech.itcolledge;
 
 public class FirstContact {
 
-    public void main(String args) {
-        println("Hello World!");
+    public static void main(String[] args) {
+        Person madonna = new Person();
+        madonna.talk("Hello World!");
+    }
+}
