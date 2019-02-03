@@ -27,13 +27,5 @@ public class GroupDivisor {
         System.out.println("---------=============---------");
         System.out.println("\n");
         System.out.println("\n");
-
-        // todo using example above create a program to calculate return on investment ROI
-        System.out.println("Insert the initial investment");
-        int investment = 0;
-        System.out.println("Insert the expected return a year %");
-        int percentage = 0;
-
-        System.out.println(String.format("You get %d money back, out of which %d. is pure profit", groups, leftover));
     }
 }
