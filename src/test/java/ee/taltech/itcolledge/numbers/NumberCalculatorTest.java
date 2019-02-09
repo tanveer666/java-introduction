@@ -13,8 +13,10 @@ public class NumberCalculatorTest {
         assertEquals(5, NumberCalculator.sum(0, 5));
         assertEquals(10, NumberCalculator.sum(5, 5));
 
-        //todo add test with -5
+        assertEquals(-10, NumberCalculator.sum(-5, -5));
+        assertEquals(-5, NumberCalculator.sum(-5, 0));
+        assertEquals(-5, NumberCalculator.sum(0, -5));
 
-        //todo add test with +5 and -5
+        assertEquals(0, NumberCalculator.sum(-5, 5));
     }
 }
