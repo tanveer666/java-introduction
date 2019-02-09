@@ -5,7 +5,6 @@ public class Planet {
     private String name;
     private Integer distanceFromSun;
 
-
     public String getName() {
         return name;
     }

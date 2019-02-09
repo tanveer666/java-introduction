@@ -13,32 +13,31 @@ public class SolarSystemTest {
         Sun sun = SolarSystem.getSun();
         assertNotNull(sun);
         assertEquals(5778, (int) sun.getSurfaceTemperatureKelvin());
-        // todo assert temperature for Celsius:
-        //  Celsius is Kelvin - 273.15
-        //  for example: 0K - 273.15 = -273.1*C
+        assertEquals(5505, (int) sun.getSurfaceTemperatureCelcius());
     }
 
     @Test
     public void asking_for_earth_returns_earth() {
         Planet earth = SolarSystem.getEarth();
-        assertNotNull(earth);
-        assertEquals("Earth", earth.getName());
+        validatePlanet("Earth", earth);
         assertEquals(_149_600_000, (long) earth.getDistanceFromSun());
     }
 
-    // todo add more tests for other planets
-
-
     @Test
     public void you_can_ask_planets_by_their_name() {
-        Planet earth = SolarSystem.getPlanet("earth");
-        assertNotNull(earth);
-        assertEquals("Earth", earth.getName());
-        //todo validate you can ask for other planets
+        validatePlanet("Earth", SolarSystem.getPlanet("earth"));
+        validatePlanet("Mars", SolarSystem.getPlanet("mars"));
+        validatePlanet("Venus", SolarSystem.getPlanet("venus"));
+        validatePlanet("Mercury", SolarSystem.getPlanet("mercury"));
     }
 
     @Test(expected = UnknownPlanetException.class)
     public void unknown_planet_throws_unknown_planet_exception() {
         SolarSystem.getPlanet("unknown");
+    }
+
+    private void validatePlanet(String name, Planet earth) {
+        assertNotNull(earth);
+        assertEquals(name, earth.getName());
     }
 }
