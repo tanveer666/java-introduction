@@ -18,7 +18,6 @@ public class NumberCalculator2Test {
     @Test
     public void sum_is_a_sum_of_4_numbers() {
         assertEquals(0, NumberCalculator2.sum(0, 0, 0, 0));
-
         assertEquals(10, NumberCalculator2.sum(10, 0, 0, 0));
         assertEquals(10, NumberCalculator2.sum(0, 10, 0, 0));
         assertEquals(10, NumberCalculator2.sum(0, 0, 10, 0));
@@ -26,18 +25,19 @@ public class NumberCalculator2Test {
         assertEquals(40, NumberCalculator2.sum(10, 10, 10, 10));
     }
 
-
     @Test
     public void sum_is_a_sum_of_many_numbers() {
-        //todo uncomment code (it does not compile)
+        //uncomment code (it does not compile)
         // to fix compilation head to NumberCalculator2
-        //assertEquals(0, NumberCalculator2.sum(0, 0, 0, 0, 0, 0, 0, 0));
-        //assertEquals(10, NumberCalculator2.sum(10, 0, 0, 0, 0, 0, 0, 0));
-        //assertEquals(10, NumberCalculator2.sum(0, 10, 0, 0, 0, 0, 0, 0));
-        //assertEquals(10, NumberCalculator2.sum(0, 0, 10, 0, 0, 0, 0, 0));
+        assertEquals(0, NumberCalculator2.sum(0, 0, 0, 0, 0, 0, 0, 0));
+        assertEquals(10, NumberCalculator2.sum(10, 0, 0, 0, 0, 0, 0, 0));
+        assertEquals(10, NumberCalculator2.sum(0, 10, 0, 0, 0, 0, 0, 0));
+        assertEquals(10, NumberCalculator2.sum(0, 0, 10, 0, 0, 0, 0, 0));
 
-        //todo now uncomment even longer code
-        //assertEquals(10, NumberCalculator2.sum(0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
-        //todo add more tests
+        //now uncomment even longer code
+        assertEquals(10, NumberCalculator2.sum(0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
+        //add more tests
+        assertEquals(10, NumberCalculator2.sum(0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
+        assertEquals(-10, NumberCalculator2.sum(0, 0, 0, 0, 0, 0, 0, 0, -10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
     }
 }
