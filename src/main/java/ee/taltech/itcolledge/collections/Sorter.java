@@ -4,11 +4,11 @@ import java.util.List;
 
 public class Sorter {
 
-    public List<Integer> sortAsc(List<Integer> numbers){
+    public static List<Integer> sortAsc(List<Integer> numbers){
         return numbers;
     }
 
-    public List<Integer> sortDesc(List<Integer> numbers){
+    public static List<Integer> sortDesc(List<Integer> numbers){
         return numbers;
     }
 }

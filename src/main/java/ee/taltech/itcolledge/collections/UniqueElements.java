@@ -4,7 +4,7 @@ import java.util.List;
 
 public class UniqueElements {
 
-    public List<Integer> removeDuplicates(List<Integer> numbers){
+    public static List<Integer> removeDuplicates(List<Integer> numbers){
         return numbers;
     }
 }

@@ -17,5 +17,5 @@ public class NegativesRemover {
     }
 
     //todo ADVANCED
-    // can you write a method to replace them all?
+    // can you write one(uno, yks, odin) method to replace them all?
 }

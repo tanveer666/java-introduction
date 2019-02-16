@@ -10,12 +10,14 @@ import static org.junit.Assert.*;
 
 public class NegativesRemoverTest {
 
+    //todo 1 fix tests
+    // ask lecturer about Arrays.asList vs Lists.newArrayList
+
     @Test
     public void removeNegativeIntegers() {
         assertEquals(null, NegativesRemover.removeNegativeIntegers(null));
         assertEquals(Arrays.asList(1), NegativesRemover.removeNegativeIntegers(Lists.newArrayList(-1, 1)));
 
-        //todo Arrays vs Lists
     }
 
     @Test
