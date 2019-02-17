@@ -1,15 +1,13 @@
 package ee.taltech.itcolledge.fan;
 
 import java.util.List;
+import java.util.Map;
 
 public class BarFight {
 
 
-    public static Object groupFansByClub(Fan... fans){
+    public static Map<String, List<Fan>> groupFansByClub(Fan... fans) {
         return null;
     }
 
-    public static Object groupFansByClub(List<Fan> fans){
-        return null;
-    }
 }

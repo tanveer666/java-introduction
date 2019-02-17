@@ -2,35 +2,35 @@ package ee.taltech.itcolledge.words;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class WordFilter {
 
-    //todo make methods work, don't forget about the tests
-    public List<Word> getNouns(List<Word> words){
+    public List<Word> getNouns(List<Word> words) {
         return words;
     }
 
-    public Word getFirstVerb(List<Word> words){
+    public Word getFirstVerb(List<Word> words) {
         return words.get(0);
     }
 
-    public Word getFirstOfType(List<Word> words, Word.WordType type){
+    public Word getFirstOfType(List<Word> words, Word.WordType type) {
         return words.get(0);
     }
 
-    public List<Word> getAllNotNouns(List<Word> words){
+    public List<Word> getAllNotNouns(List<Word> words) {
         return words;
     }
 
-    public List<String> getNounString(List<Word> words){
+    public List<String> getNounStrings(List<Word> words){
         return new ArrayList<>();
     }
 
-    public String getFirstVerbString(List<Word> words){
+    public String getFirstVerbString(List<Word> words) {
         return "";
     }
 
-    public String getFirstStringOfType(List<Word> words, Word.WordType type){
+    public String getFirstStringOfType(List<Word> words, Word.WordType type) {
         return "";
     }
 }
