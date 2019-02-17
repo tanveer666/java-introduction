@@ -13,35 +13,47 @@ import static org.junit.Assert.*;
 public class PersonGrouperTest {
 
     public static List<Person> testPeople = Lists.newArrayList(
-            new Person("11111", "Donald", "Duck"),
-            new Person("22222", "Great", "President"),
-            new Person("33333", "Michael", "Jackson"));
+            new Person("11111", "Great", "President"),
+            new Person("22222", "Donald", "Duck"),
+            new Person("33333", "Cristiano", "Ronaldo"));
+
+    //todo 1 fix tests
 
     @Test
-    public void groupPeopleByIdCode() {
+    public void grouping_people_by_id_code_divides_them_to_id_code_and_person_pairs() {
         Map<String, Person> map = PersonGrouper.groupPeopleByIdCode(testPeople);
         assertEquals(3, map.size());
         assertNull(map.get("-1"));
         Person person1 = map.get("11111");
-        assertEquals("Donald", person1.getFirstName());
+        assertEquals("Great", person1.getFirstName());
         Person person2 = map.get("22222");
-        assertEquals("Great", person2.getFirstName());
+        assertEquals("Donald", person2.getFirstName());
         Person person3 = map.get("33333");
-        assertEquals("Michael", person3.getFirstName());
+        assertEquals("Cristiano", person3.getFirstName());
     }
 
     @Test
-    public void groupPeopleByFirstAndLastName() {
+    public void grouping_people_by_first_and_last_name_code_divides_them_to_full_name_and_person_pairs() {
         Map<String, Person> map = PersonGrouper.groupPeopleByFirstAndLastName(testPeople);
         assertEquals(3, map.size());
-        //todo add more tests
+        assertNull(map.get("-1"));
+        Person person1 = map.get("Donald Duck");
+        assertEquals("Donald", person1.getFirstName());
+        Person person2 = map.get("Great President");
+        assertEquals("Great", person2.getFirstName());
+        Person person3 = map.get("Cristiano Ronaldo");
+        assertEquals("Cristiano", person3.getFirstName());
     }
 
     @Test
     public void groupPeopleByFirstAndLastNameAsc() {
         NavigableMap<String, Person> map = PersonGrouper.groupPeopleByFirstAndLastNameAsc(testPeople);
         assertEquals(3, map.size());
-        Map.Entry<String, Person> entry = map.firstEntry();
-        //todo add more tests
+        Map.Entry<String, Person> firstEntry = map.firstEntry();
+        assertEquals("Donald Duck", firstEntry.getKey());
+        assertEquals("Donald", firstEntry.getValue().getFirstName());
+        Map.Entry<String, Person> lastEntry = map.lastEntry();
+        assertEquals("Cristiano Ronaldo", lastEntry.getKey());
+        assertEquals("Cristiano", lastEntry.getValue().getFirstName());
     }
 }

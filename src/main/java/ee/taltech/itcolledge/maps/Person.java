@@ -24,6 +24,13 @@ public class Person {
         this.sex = sex;
     }
 
+    public Person(String idCode, String firstName, String lastName, Address address) {
+        this.idCode = idCode;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+    }
+
     public String getIdCode() {
         return idCode;
     }
@@ -54,5 +61,13 @@ public class Person {
 
     public void setSex(Sex sex) {
         this.sex = sex;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }
