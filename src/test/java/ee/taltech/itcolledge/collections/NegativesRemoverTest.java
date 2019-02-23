@@ -17,15 +17,6 @@ public class NegativesRemoverTest {
     public void removeNegativeIntegers() {
         assertEquals(null, NegativesRemover.removeNegativeIntegers(null));
         assertEquals(Arrays.asList(1), NegativesRemover.removeNegativeIntegers(Lists.newArrayList(-1, 1)));
-
-    }
-
-    @Test
-    public void removeNegativeIntegers_while_preserving_original_list() {
-        assertEquals(null, NegativesRemover.removeNegativeIntegers(null));
-        List<Integer> numbers = Lists.newArrayList(-1, 1);
-        assertEquals(Arrays.asList(1), NegativesRemover.removeNegativeIntegers(numbers));
-        assertEquals(numbers, NegativesRemover.removeNegativeIntegers(numbers));
     }
 
     @Test
