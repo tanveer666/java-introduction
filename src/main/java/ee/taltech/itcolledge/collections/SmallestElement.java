@@ -4,8 +4,15 @@ import java.util.List;
 
 public class SmallestElement {
 
-    public static Integer findSmallest(List<Integer> numbers){
-        return null;
+    public static Integer findSmallest(List<Integer> numbers) {
+        if (numbers == null || numbers.isEmpty()) return null;
+        Integer min = Integer.MAX_VALUE;
+        for (Integer number : numbers) {
+            if (number < min) {
+                min = number;
+            }
+        }
+        return min;
     }
 
     //todo ADVANCED

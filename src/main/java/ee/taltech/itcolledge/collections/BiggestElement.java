@@ -4,8 +4,15 @@ import java.util.List;
 
 public class BiggestElement {
 
-    public static Integer findBiggest(List<Integer> numbers){
-        return null;
+    public static Integer findBiggest(List<Integer> numbers) {
+        if (numbers == null || numbers.isEmpty()) return null;
+        Integer max = numbers.get(0);
+        for (Integer number : numbers) {
+            if (number > max) {
+                max = number;
+            }
+        }
+        return max;
     }
 
     //todo ADVANCED
