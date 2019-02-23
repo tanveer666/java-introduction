@@ -10,5 +10,6 @@ public class VariableCapNumberCalculatorTest {
     public void variable_calculator_of_1_caps_at_1() {
         VariableCapNumberCalculator calculator = new VariableCapNumberCalculator(1);
         assertEquals(1, calculator.sum(1, 1));
+        assertEquals(-1, calculator.sum(0, -1));
     }
 }
