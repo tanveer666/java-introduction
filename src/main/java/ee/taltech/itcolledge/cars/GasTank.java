@@ -6,11 +6,11 @@ public class GasTank {
 
 
     public void addGas(double l) {
-
+        gasoline = l;
     }
 
     public void consumeGas(double i) {
-
+        gasoline -= i;
     }
 
     public Double getGasoline() {
